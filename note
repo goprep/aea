@@ -1,0 +1,91 @@
+Data preparation: Collect a dataset of stop sign images, and split it into training, validation,
+and test sets.
+
+Model selection: Choose a pre-trained model that is suitable for image classification,
+such as ResNet, VGG, or Inception.
+
+Model fine-tuning: Fine-tune the pre-trained model on the stop sign dataset using transfer learning.
+This involves freezing the initial layers of the model and training the remaining layers using the stop sign data.
+
+Adversarial attack generation: Generate adversarial examples using common attack methods,
+such as FGSM, DeepFool, or CW.
+
+Defense evaluation: Evaluate the defense effectiveness of the fine-tuned model using
+adversarial examples generated in the previous step.
+
+Defense enhancement: Enhance the defense effectiveness by adding additional layers or
+modules to the model, such as adversarial training, feature squeezing, or input transformations.
+
+Repeat steps 5-6 until a robust defense is achieved.
+
+Test and evaluate: Test the final defense model on a test set of stop sign images,
+including both clean and adversarial examples, to evaluate its performance.
+
+Deployment: Deploy the final defense model in a real-world environment to protect
+against adversarial example attacks on stop sign images.
+
+
+.
++-- data
+|   +-- stop_signs
+|   |   +-- train
+|   |   |   +-- image1.jpg
+|   |   |   +-- image2.jpg
+|   |   |   +-- ...
+|   |   +-- validation
+|   |   |   +-- image1.jpg
+|   |   |   +-- image2.jpg
+|   |   |   +-- ...
+|   |   +-- test
+|   |   |   +-- image1.jpg
+|   |   |   +-- image2.jpg
+|   |   |   +-- ...
++-- models
+|   +-- pre-trained
+|   |   +-- resnet.py
+|   |   +-- vgg.py
+|   |   +-- inception.py
+|   +-- fine-tuned
+|   |   +-- resnet.py
+|   |   +-- vgg.py
+|   |   +-- inception.py
++-- attacks
+|   +-- fgsm.py
+|   +-- deepfool.py
+|   +-- cw.py
++-- defenses
+|   +-- adversarial_training.py
+|   +-- feature_squeezing.py
+|   +-- input_transformations.py
++-- utils
+|   +-- data_loader.py
+|   +-- metrics.py
++-- main.py
++-- config.py
++-- README.md
+
+data/stop_signs contains the stop sign images used for training, validation, and testing.
+
+models/pre-trained contains the pre-trained models for image classification, such as ResNet, VGG, and Inception.
+
+models/fine-tuned contains the fine-tuned models for stop sign classification based on the pre-trained models.
+
+attacks contains the implementation of different adversarial attack methods, such as FGSM, DeepFool, and CW.
+
+defenses contains the implementation of different defense enhancement strategies, such as adversarial
+training, feature squeezing, and input transformations.
+
+utils contains utility functions, such as data loading and metrics calculation.
+
+main.py is the main script that ties everything together and implements the complete process of
+designing a robust proactive defense network.
+
+config.py contains configuration settings, such as the path to the data, the pre-trained model,
+ the attack method, and the defense enhancement strategy.
+
+
+
+
+
+
+
